@@ -1,0 +1,82 @@
+Input types
+-Button
+<input type="button" value="Click me" onclick="msg()" />
+
+<button onclick="alert('Are you sure you want to continue?')">
+    <img src="https://yourserver.com/button_img.jpg" alt="Submit the form" height="64" width="64">
+     </button>
+------------------------------
+Checkbox
+<input type="checkbox" id="dog" name="dog" value="Dog">
+<label for="dog">I like dogs</label>
+<input type="checkbox" id="cat" name="cat" value="Cat">
+<label for="cat">I like cats</label>
+------------------------------
+Radio
+<input type="radio" id="light" name="theme" value="Light">
+<label for="light">Light</label>
+<input type="radio" id="dark" name="theme" value="Dark">
+<label for="dark">Dark</label>
+----------------------------
+Submit
+<form action="myserver.com" method="POST">
+    <input type="submit" value="Submit" />
+</form>
+------------------------------
+Text
+<label for="fname">First name:</label> 
+<input type="text" id="fname" name="fname"> 
+----------------------------
+Password
+<label for="pwd">Password:</label> 
+<input type="password" id="pwd" name="pwd"> 
+----------------------------
+Date
+<label for="dob">Date of birth:</label>
+<input type="date" id="dob" name="date of birth">
+------------------------------
+Datetime-local
+<label for="birthdaytime">Birthday (date and time):</label>
+<input type="datetime-local" id="birthdaytime" name="birthdaytime">
+----------------------------
+Email
+<label for="email">Enter your email:</label>
+<input type="email" id="email" name="email">
+----------------------------
+File
+<label for="myfile">Select a file:</label>
+<input type="file" id="myfile" name="myfile" multiple>
+------------------------------
+Hidden
+Defines a control that is not displayed but whose value is still submitted to the server.
+<input type="hidden" id="custId" name="custId" value="3487">
+-------------------------------
+Image
+Defines an image as a graphical submit button. You should use the “src” attribute to point to the location of your image file.
+<input type="image"src="submit_img.png" alt="Submit" width="48" height="48">
+-------------------------------
+Number
+<input type="number" id="quantity" name="quantity" min="1" max="5">
+------------------------------
+Range
+<label for="volume">Volume:</label>
+<input type="range" id="volume" name="volume" min="0" max="10">
+--------------------------------
+Reset
+<input type="reset">
+----------------------------
+Search
+<label for="gsearch">Search in Google:</label>
+<input type="search" id="gsearch" name="gsearch">
+----------------------------
+Time
+<label for="appt">Select a time:</label>
+<input type="time" id="appt" name="appt">
+------------------------------
+Tel
+<label for="phone">Enter your phone number:</label>
+<input type="tel" id="phone" name="phone" pattern="[+]{1}[0-9]{11,14}">
+------------------------------
+Url
+<input type="url" id="homepage" name="homepage">
+------------------------------
