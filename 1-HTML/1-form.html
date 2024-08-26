@@ -1,0 +1,139 @@
+<!-- SOCIAL MEDIA CARDS AND CLIENT-SIDE FORM VALIDATION -->
+<!-- Learn to use attributes required, minlength, maxlength, min, max, multiple, checked, pattern and use of pseudoclasses invalid and focus in client-side form validation -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social media cards and Forms</title>
+
+    <!-- Open Graph Protocol(OGP) for SOCIAL MEDIA CARDS-->
+    <meta property="og:title" content="Our Menu">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url" content="https://littlelemon">
+    <meta property="og:description" content="Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Little Lemon">
+
+    <style>
+        input:focus:invalid {
+            border: 2px red solid;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="logo">
+    </header>
+    <nav>
+        <li><a href="">Home</a></li>
+        <li><a href="">Location</a></li>
+        <li><a href="">Blog</a></li>
+    </nav>
+    <main>
+        <form method="POST">
+            <div>
+                <!-- required,minlength,maxlength attribute -->
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required minlength="2">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required minlength="2" maxlength="8">
+            </div>
+            <div>
+                <!-- note to add value and same name in input -->
+                <!-- checked attribute used to select one initially -->
+                <!-- input inside label to increase user experience in mobile;applicable to checkbox also -->
+                <label>Gender: </label>
+                <label for="male">Male
+                    <input type="radio" id="male" value="Male" name="gender" checked>
+                </label>
+                <label for="female">Female
+                    <input type="radio" id="female" value="Female" name="gender">
+                </label>
+            </div>
+            <div>
+                <!-- used min,max attribute -->
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" min="18" max="49">
+            </div>
+            <div>
+                <label for="dob">DOB</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+            <div>
+                <label for="experience">Experience</label>
+                <!--used min,max attribute -->
+                <!--  js code oninput in input tag to show the value of range -->
+                <input type="range" id="experience" name="experience" min="1" max="60"
+                    oninput="this.nextElementSibling.value=this.value">
+                <output>4</output>
+            </div>
+            <div>
+                <!-- can add readonly,minlength,maxlength as attributes -->
+                <label for="address">Address</label><br>
+                <textarea id="address" name="address" rows="10" cols="50"></textarea>
+            </div>
+            <div>
+                <!-- in datalist we can choose from list or type in list -->
+                <!-- add list in input -->
+                <!--and value in option -->
+                <label for="countryname">Country</label>
+                <input list="countryname" name="country">
+                <datalist id="countryname">
+                    <option value="india">India</option>
+                    <option value="UK">UK</option>
+                </datalist>
+            </div>
+            <!-- in dropdown we can only choose -->
+            <!-- can add size and optgroup  -->
+            <!-- note to add value in option ,can also use "selected" as attribute to initially select an option-->
+            <div>
+                <label for="location">Location</label>
+                <select id="location" name="location">
+                    <optgroup label="Palakkad">
+                        <option value="pattambi">Pattambi</option>
+                        <option value="cherpulassery">Cherpulassery</option>
+                    </optgroup>
+                    <optgroup label="Calicut">
+                        <!-- perambra selected -->
+                        <option value="perambra" selected>Perambra</option>
+                        <option value="kondotty">Kondotty</option>
+                    </optgroup>
+                    <optgroup label="Malappuram">
+                        <option value="tirur">Tirur</option>
+                        <option value="thootha">Thootha</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" pattern="[+]{1}[0-9]{11,14}">
+            </div>
+            <div>
+                <!-- note to add value -->
+                <!-- input inside label to increase user experience in mobile -->
+                <label>Skills: </label>
+                <label for="html">HTML
+                    <input type="checkbox" id="html" name="html" value="html">
+                </label>
+                <label for="css">CSS
+                    <input type="checkbox" id="css" name="css" value="html">
+                </label>
+            </div>
+            <div>
+                <label for="doc">Upload Your Document</label>
+                <input type="file" id="doc" name="doc" multiple>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </main>
+    <footer>
+        <p>Copyright Little Lemon</p>
+    </footer>
+</body>
+</html>
