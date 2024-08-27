@@ -1,0 +1,70 @@
+<!-- video.audio,images,iframe,canvas -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Elements</title>
+</head>
+
+<body>
+    <div>
+        <h2>Play audio</h2>
+        <!-- loop to repeat audio after finishing -->
+        <audio loop controls>
+            <!--audio types-mp3(mpeg),wav,ogg -->
+            <!-- gives alternatives types for browsers if all not work,then display the text -->
+            <source src="audio.ogg" type="audio/ogg">
+            <source src="audio.mp3" type="audio/mpeg">
+            <source src="audio.wav" type="audio/wav">
+            audio not supported
+        </audio>
+    </div>
+    <form action="" method="POST">
+        <div>
+            <h2>Rate video</h2>
+            <video controls width="320" height="240">
+                <!-- video types-mp4,webm,ogg -->
+                <source src="video.mp4" type="video/mp4">
+            </video><br>
+            <label for="rating">Rating</label>
+            <input type="range" min="1" max="5" id="rating" name="rating" list="ratings">
+            <datalist id="ratings">
+                <option value="1" label="1"></option>
+                <option value="2"></option>
+                <option value="3"></option>
+                <option value="4"></option>
+                <option value="5" label="5"></option>
+            </datalist>
+        </div>
+    </form>
+    <div>
+        <h2>Image</h2>
+        <!--.APNG – Animated Portable Network Graphics 
+            .AVIF – AV1 Image Format 
+            .GIF – Graphics Interchange Format 
+            .JPEG / .JPG – Joint Photographic Expert Group image format 
+            .PNG – Portable Network Graphics 
+            .SVG – Scalable Vector Graphics 
+            .WEBP – Web Picture Format  -->
+        <figure>
+            <img src="./2-html.png" height="240" width="320" alt="My Profile Photo">
+            <figcaption>HTML logo</figcaption>
+        </figure>
+    </div>
+    <div>
+        <h2>iFrame</h2>
+        <!-- iframe used to embed items in another website into our webpage -->
+        <!-- allow attribute used to disable unsecured browser features
+             allow="fullscreen;geolocation;camera;microphone"-->
+        <!-- sandbox restricts browser behaviors such as downloading,preventing popups and advertisements(allow-same-origin allow-scripts);write nothing inside to prevent all
+             sandbox="allow-same-origin allow-scripts allow-downloads allow-forms allow-modals allow-popups allow-presentation allow-orientation-lock"-->
+        <!-- loading attribute lazy or eager -->
+        <iframe src="./html.png" width="320" height="240" frameborder="0"
+            allow="camera 'none'; microphone 'none';payment 'none';" sandbox="" loading="lazy"></iframe>
+    </div>
+
+</body>
+
+</html>
