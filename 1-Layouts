@@ -1,0 +1,97 @@
+CSS-cascading style sheets
+how the content of webpage organized
+styles are applied based on specificity(inline,id,classes-attributes-pseudo-classes,elements-pseudoelements) like a cascading waterfall,hence the name.
+
+absolute units-px,cm,in(not dynamic to variable sizes)
+relative units-em,rem,vh,vw,%(dynamic to variable sizes)
+
+#display
+-block,inline,inline-block,flex,grid,none
+
+#position
+-static,relative,absolute,fixed,sticky
+
+---------------------------------------------------------
+                                LAYOUTS-BOX,FLEXBOX,GRID
+
+1-BOX model(margin,border,padding,content)
+block model and inline model
+
+2-FLEXBOX(flexible box model)
+one dimensional (can arrange in row or column)
+adds responsiveness (can grow,shrink and align items inside it)
+
+3-GRID-
+two dimensional
+responsive
+
+-----------------------------------------------------------------------------
+                                FLEXBOX(flexible box model)
+display:flex; (in parent container)
+alignment properties-
+-justify-content:flex-start,center,flex-end,space-around,space-between,space-evenly
+-flex-wrap:no-wrap,wrap(automatically wrap items with as window space hetting smaller)
+-flex-direction:row,column,row-reverse,column-reverse
+-align-items:flex-start,center,flex-end,baseline,stretch
+-gap--(row-gap,column-gap)
+-align-self--(to align individual items inside the flex,it overrides the properties of align-items)
+-flex-grow,flex-shrink,flex-basis--(together determine how flex takes space,grows and shrinks acc to space)
+ eg==flex:1 0 auto [flex-grow,flex-shrink,flex-basis respectively]
+
+ ---------------------------------------------------------
+ FLEX CHARTS  
+ can generate both horizontal and vertical bars using flexbox
+ flex:flex-grow,flex-shrink,flex-basis
+ flex-grow--how much item can grow compared to other flexible items
+ flex-shrink--how much item can shrink compared to other flexible items
+ flex-basis--specifies initial length of flexiblt item
+ eg:flex:1 0 auto 
+ --------------------------------------------------------------------------------
+                                    GRID
+Gutter-space btw rows nd columns in a grid  
+Initially,Grid will flow in row wise with full width when templates are not defined
+    
+-display:grid; 
+----------------------------
+TO SET OUTLINE(DEFINES HOW MAY COLUMNS AND ROWS)
+-grid-template-columns(for each template columns) 
+ eg: grid-template-columns: 100px 100px 100px;  OR repeat(3,100px)
+-grid-template-rows 
+ eg: grid-template-rows: 2fr 1fr; 
+-grid-template-areas(allows to configure the names of a grid and how they sit in relation to one another)
+ eg:grid-template-areas: "head head" 
+                         "nav  main" 
+                         "footer  footer"; 
+-grid-auto-row [to resize all rows into 100 pixels ]
+ eg: grid-auto-rows:100px;,
+     grid-auto-rows: minmax(150px,auto);
+-grid-auto-column(to resize all column)
+--------------------------------
+TO DIVIDE ELEMENTS W.R.T COLUMN AND ROW IN OUTLINE
+-grid-column(allows for specifying where on the grid the column is to start and end) 
+ syntax:grid-column:grid-column-start grid-column-end
+ eg:grid-column:3 5 //includes column 3 to 5,
+    grid-column: 4/ span 12; /*tells element to start from grid-column-start 4 and span all 12 columns given in template*/
+-grid-row
+ syntax:grid-row:grid-row-start grid-row-end
+ eg:grid-row:3 5 //includes row 3 to 5,
+ grid-column: 4/ span 12; /*tells element to start from grid-row-start 4 and span all 12 rows*/
+-grid-area
+ syntax:grid-row-start grid-column-start  grid-row-end grid-column-end
+
+alignment properties-
+-justify-content:start,center,end,stretch,space-around,space-between,space-evenly
+-align-items:start,center,end,stretch
+-grid-gap--(grid-row-gap,grid-column-gap)
+-align-self--(to align individual items inside the flex,it overrides the properties of align-items)
+
+
+grid design layouts-
+12 and 16 column grids(divide page into 12 and 16 tracks along vertical columns)
+---------------------------------------------------------------------------------------------
+
+
+
+
+
+
