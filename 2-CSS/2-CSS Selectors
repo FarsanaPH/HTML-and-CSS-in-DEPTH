@@ -1,0 +1,83 @@
+CSS SELECTORS
+
+Element selector 
+# -id selector
+. -class selector
+* -universal or star selector
+group selector(using comma)
+----------------------------
+1--Attribute selector
+a[class]
+a[href="https://......."]
+a[href*="meta"]---------------every <a> tag with substring value meta
+a[href^="https"]---------------every <a> tag starting with https
+%next--a[href$=".com"]---------------every <a> tag ending with .com
+a[attr~="value"]-------------every <a> tag with  whitespace seperated substring "value"
+
+-------------------------
+2--nth-child or nth-of-type selector
+nth-child(n){
+    property:value
+}
+eg- li:nth-child(2){
+    color:aqua;
+    }
+OR
+nth-of-type(n){
+    property:value
+}
+--------------------------
+3--COMBINED SELECTORS
+
+i-Descendant selector(using space)---select all childs incld direct child,grandchild
+ii-child selector(>) ---only select direct child
+iii-general sibling selectors or sibling selector(~) ---to select all siblings that follow the first type
+iv-adjacent sibling selectors or adjacent selector(+) ---to select first adjacent sibling after the  first type
+---------------------------------------------------------------------------------------
+
+4--PSUEDO CLASS
+syntax--
+selector:pseudo-class{property:value;}
+
+USER ACTION STATES
+i--:hover
+ii--:active(on clicking)
+iii--:focus
+
+FORM STATES PSEUDO CLASSES
+i--:disabled and :enabled
+ii--:checked and :indeterminate
+iii--:valid and :invalid
+
+SPECIFIC POSITION-BASED STATES
+i--:first-of-type
+ii--:last-of-type
+iii--:nth-of-type()
+iv--:nth-last-of-type()
+
+--------------------------------
+WEBLINK STATES
+use [LVHA-Link,Visited,Hover,Active] order for weblink states to prevent overwriting
+
+i--:link(default)
+ii--:visited
+iii-:hover
+iv--:active(on clicking)
+
+
+
+---------------------------------------------------------------------------
+
+5--PSEUDO ELEMENTS
+syntax-
+selector::pseudo-element{property:value;}
+
+i--::before(new content can be added to a page without adding HTML code for it. You can also add styling options for this content.)
+ii--::after(new content can be added to a page without adding HTML code for it. You can also add styling options for this content.)
+iii--::first-letter
+iv--::first-line
+v--::selection(when selecting the text in webpage)
+vi--::marker(used to add style elements to a list, for instance, to color bullet points)
+
+------------------------------------------------------------------------------
+
