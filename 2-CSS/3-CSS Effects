@@ -1,0 +1,104 @@
+CSS Effect- a change which is the consequence of an action
+
+--------------------------------------------------------------------------------------------------------
+Animations- graphic in motion that transtions over time
+changes over time-gifs,flash(includes audio and video),css(scalable vector graphics-svg)
+librararies-jquery,pop motion
+-hard to learn and implement
+----------------------------------------------------------------------------------------------------------
+
+CSS effect 
+-easy to learn and easy to implement
+i-hover effect
+ii-cursor effect
+iii-sliding galleries and slideshow( carousel)
+iv-video background( commonly added to top of screen)
+v-parallax effect( eg:back to the top button)
+vi-element and color transition
+vii-full screen snapping( quick transition from one page to another while scrolling)
+
+--------------------------
+Text effect
+i--white-space:wrap/nowrap(how white space inside an element is handled)
+ii--overflow:hidden/visible/scroll(what to do if content overflow element)
+iii--text-overflow:ellipsis/clip(how to do overflow)
+iv--writing-mode:vertical-rl,vertical-rl.horizontal-tb......
+v--word-wrap:break-word,normal,initial.....
+vi--text-shadow: 
+    syntax--x-cordinate y-cordinate blur-radius shadowcolor(along horizontal.along vertical)
+    eg: text-shadow: 0 0 30px green, 0 0 5px black;
+vii--text-transform:uppercase,lowercase,full-width
+viii--text-decoration:underline,overline,line-through
+
+---------------------------
+Transform and transition property
+
+TRANSFORM
+syntax-
+selector{
+    transform:transform-function value;
+}
+transform-functions----matrix(),rotate(),translate(),scale(),skew()
+-------
+TRANSITION 
+syntax-
+selector{
+    transition:property duration timing-function delay;
+}
+
+property-all,transform(rotate, scale, translate, or skew),opacity,background-color,color,width,height,border-color,border-width,margin,padding
+timing-function-ease(default),ease-in,ease-out,ease-in-out
+
+
+-------------------------
+animation property
+
+animation syntax-
+selector{
+    animation:animationname duration timing-function delay iteration-count direction fill-mode play-state;
+}
+eg--h1{animation:bounce 3s infinite;}
+
+//timing-function-ease(default),ease-in,ease-out,ease-in-out
+//iteration-count-infinite,count
+//direction-normal(default),reverse,alternate,alternate-reverse
+
+keyframe syntax-
+@keyframes animationname{keyframes-selector {css-styles;}}
+@keyframes animationname{
+    from{property: value;}
+    to{property: value;}
+}
+
+------------------------------------------------------------------------------------------------
+RESPONSIVENESS
+Media Query--To ensure responsiveness across various devices
+syntax-
+@media media-type (media-feature) {
+    /* CSS rules */
+}
+//media-type----screen, print, all
+//media-feature-----min-width,max-width,orientation
+
+
+/* when screen is atleast 601px and max width of 1200px (e.g., tablets) */
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+    /* CSS rules */
+}
+
+/* when screen is at least 600px wide and in landscape mode */
+@media screen and (min-width: 600px) and (orientation: landscape) {
+    /* CSS rules */
+}
+
+
+/* when screen is less than 600px wide(eg:mobile) or in portrait mode */
+@media screen and (max-width: 600px), (orientation: portrait) {
+    /* CSS rules */
+}
+
+Best Practices
+Mobile-First Approach: Start with styles for the smallest devices and add media queries for larger screens.
+Use Relative Units: Use relative units like em or % for font sizes, margins, and widths to make layouts more flexible and scalable.
+
+----------------------------------------------------------------------------------------------------
