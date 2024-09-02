@@ -1,0 +1,87 @@
+Preprocessors: SASS, SCSS, Stylus
+
+CSS Preprocessors
+-CSS was designed in a way made the code very long, messy and complex. It also made it difficult to troubleshoot. 
+-Preprocessors generally used to reduce the amount of CSS you need to write and allow you to re-use values across multiple rules. 
+-It include the option to create variables, loops, and if else statements.
+-The use of these preprocessors requires the installation of a compiler on top of your web server. 
+
+Benefits of Using Preprocessors
+-Variables: Define variables for colors, fonts, and other design elements to maintain consistency and make global changes easily.
+-Nesting: Organize CSS hierarchically to reflect the structure of your HTML.
+-Mixins: Create reusable chunks of CSS code to avoid repetition.
+-Functions: Use built-in or custom functions to manipulate values and streamline styles.
+-Inheritance: Share a set of properties from one selector to another.
+
+
+Some Popular CSS Preprocessors-SASS, LESS, Stylus and PostCSS
+-SASS (Syntactically Awesome Style Sheets)- is a scripting language that CSS compiles and interprets into CSS.
+ SCSS Syntax: The most commonly used syntax, similar to CSS, with curly braces and semicolons but can declare variables. Files use the .scss extension.
+ SASS Syntax: An older, more concise syntax without braces and semicolons, relying on indentation. Files use the .sass extension.
+
+-LESS( Leaner Style Sheets )----A simple and beginner-friendly preprocessor that offers variables, nesting, and functions.
+-Stylus---Known for its flexibility and minimal syntax(no colon,braces,dollar for variables), Stylus supports both concise and CSS-like syntaxes.
+-PostCSS---A tool for transforming CSS with JavaScript plugins, offering great flexibility and customizability.
+
+-----------------------------------------------------------------------------------------------------------------
+-SASS (Syntactically Awesome Style Sheets)-a scripting language that CSS compiles and interprets into CSS.
+
+~Regular CSS
+body { 
+    font: 100% Arial; 
+    color: lightblue; 
+} 
+
+~SCSS
+$font-stack: Arial; 
+$primary-color: lightblue; 
+body { 
+  font: 100% $font-stack; 
+  color: $primary-color; 
+} 
+
+~SASS
+$font-stack: Arial 
+$primary-color: lightblue 
+body 
+  font: 100% $font-stack 
+  color: $primary-color 
+
+-----
+Another important functionality in SASS is the use of directives. Let us explore a couple of directives called @mixin and @include. 
+
+MIXIN-
+Syntax
+@mixin name {
+property: value;
+property: value;
+  ...
+}
+
+eg--@mixin some-rules { 
+    color: lightblue; 
+    font-size: 25px; 
+    font-weight: bold; 
+}
+
+div { 
+    @include some-rules; 
+} 
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+Stylus CSS-flexible and minimal syntax(no colon,braces,dollar for variables), Stylus supports both concise and CSS-like syntaxes.
+
+~Stylus
+eg-1--
+body 
+  font 100% Arial 
+  color lightblue 
+
+eg-2--
+add(a, b) 
+  a + b 
+
+div 
+  margin add(10px, 20px)
+
