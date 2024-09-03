@@ -1,0 +1,62 @@
+/*
+Additional Resources-Handling Errors,Browser-specific CSS,Device-specific CSS
+
+Handling Errors
+Errors--skill-based,rule-based,knowledge-based
+skill-based----from ignoring delimiter(;),quotation mark,brackets
+rule-based---starting name with number,writing undefined properties
+knowledge-based---from complicated code such as from attribute selectors or writing rules from multiple classes.
+
+Handle error-
+use universal selector,shorthand,specificity etc
+use linter tools
+ eg--vs code extension stylelint
+     create a file ".stylelintrc.json" and write rules in it such as only accept hsl values etc.
+     This extension will search for the rules within our code(dont forget to add stylelint name as  ".stylelintrc.json" in the setting of the extension )
+     In file ".stylelintrc.json" write-
+     {
+        "rules":{
+            "alpha-value-notation":"number",
+            "color-no-hex":true
+        }
+     }
+     //refer linting rules for additional rules 
+
+----------------------------------------------------------------------------------------------------------------
+
+
+ It is important to ensure that our css styles work properly in different browsers and different devices
+
+Browser-specific CSS--
+to ensure css code is compatible and works properly in a particular web browser
+
+//device-pixel-ratio to specify density of scheme
+//also used for aspects screen resolution,viewport,height....
+
+-for chrome version 29 and above
+@media screen and (-webkit-device-pixel-ratio:0) and (min-resolution:.001dpcm){
+        selector{property:value;}
+}
+------
+@media(-webkit-device-pixel-ratio:1){
+    p{color:red}
+}
+
+-for safari
+@media not all and (min-resolution:.001dpcm) {@supports (-webkit-appearance:none) and (display:flow-root)
+   {.selector{property:value;}}
+}
+
+-CSSlibraries that ensure CSS rules are consistent across all browsers
+ eg--modernizer,reset.css,normalize.css
+ Browserstack.com---a resource for cross browser and mobile device testing of CSS styles
+
+-----------------------------------------------------------------------------------------------------
+
+Cross-device Testing--
+to ensure css code is compatible and works properly acrodd different devices
+
+Use Dev Tools provided by browsers
+eg--In inspect, click on Toggle Device Toolbar" icon, which looks like a phone and tablet to check on different viewports.
+
+------------------------------------------------------------------------------------------------------ */
