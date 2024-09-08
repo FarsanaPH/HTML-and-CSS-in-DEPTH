@@ -1,0 +1,23 @@
+body{
+    margin: 20px;
+}
+
+.box{
+    background-color: #247;
+    color: #fff;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 150%;
+}
+
+.container{
+    /* initially grid will cover in row wise with full width */
+    display: grid;
+    grid-template-columns: repeat(3,100px); /*3 column size*/
+     grid-template-rows: 2fr 1fr;    /* 2 row size in fraction */
+    /* grid-auto-rows:100px;                //to resize all rows into 100 pixels  */
+    /* grid-auto-rows: minmax(150px,auto);  //to set min and max values for row */
+    grid-gap: 10px;
+    background-color:brown;
+}
