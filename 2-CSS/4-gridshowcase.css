@@ -1,0 +1,22 @@
+body{
+    display:grid;                      /*importnt-comment it to learn*/
+    height:150vh;
+    grid-template-rows: auto 1fr auto; /*importnt-comment it to learn*/
+}
+
+header{
+    background-color: #2C3333;
+    text-align: center;
+    padding: 2em;
+}
+main{
+    background-color: green;
+    text-align: center;
+    padding: 2em;
+}
+
+footer{
+    background-color:paleturquoise;
+    text-align: center;
+    padding: 2em;
+}
