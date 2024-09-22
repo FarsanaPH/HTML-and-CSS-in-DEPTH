@@ -1,0 +1,24 @@
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Link by default */
+a:link{
+    color: blue;
+}
+
+/* Link already visited */
+a:visited{
+    color:violet;
+}
+
+/* when hovering over the link with mouse */
+a:hover{
+    color: green;
+}
+
+/* when link is selected */
+a:active{
+    color: white;
+    background-color: black;
+}
