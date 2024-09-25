@@ -1,0 +1,48 @@
+    
+    /* ::first-letter */
+    li::first-letter { 
+    color:coral;   
+    font-size: 1.3em;   
+    font-weight: bold;   
+    line-height: 1;  
+    } 
+
+    /* ::first-line */
+    li::first-line {
+        color: lightseagreen;
+        text-decoration: underline;
+        line-height: 1;
+    }
+
+    /* ::selection(when selecting the text in webpage) */
+    li::selection {
+        color:brown;
+        background-color: antiquewhite;
+        line-height: 1;
+    }
+
+    /* ::marker(used to add style elements to a list, for instance, to color bullet points) */
+    li::marker {
+        color: cornflowerblue;
+        content: '<> ';
+        font-size: 1.1em;
+    }
+
+    /* ::before(new content can be added to a page without adding HTML code for it. You can also add styling options for this content.) */
+    #tips::before{
+        background: darkkhaki;
+        color:darkslategray;
+        content: "Tip:";
+        padding-left: 3px;
+        padding-right: 5px;
+        border-radius: 10%;
+    }
+    
+    /* ::after(new content can be added to a page without adding HTML code for it. You can also add styling options for this content.) */
+    #tips::after{
+        background:darkkhaki;
+        color:darkslategray;
+        content: "!!";
+        padding-right: 5px;
+        border-radius: 20%;
+    }
