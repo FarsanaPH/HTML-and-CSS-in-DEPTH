@@ -1,0 +1,74 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1{
+    color:brown;
+}
+
+/* ellipsis shows three dots that represent the text that is clipped  */
+.ellipsis{
+    width: 300px;
+    border: 2px solid brown;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ellipsis:hover{
+    overflow: visible;
+}
+
+/* in clip, additional content is truncated to fit in the box */
+.clip{
+    width: 300px;
+    border: 2px solid brown;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.clip:hover{
+    overflow: visible;
+}
+
+/* vertical text */
+.vertical{
+    writing-mode: vertical-rl;
+}
+
+/* word-wrap */
+.wordwrap{
+    width: 80px;
+    border: 2px solid brown;
+    overflow: hidden;
+}
+
+.wordwrap{
+    word-wrap: break-word;
+}
+
+/* text shadow */
+.textshadow{
+    text-shadow: 0 0 30px green,0 0 5px white;
+    font-size: 50px;
+    background-color: black;
+}
+
+.glow{
+    color:rgb(237,237,151);
+    font-size: 25px;
+    font-family:Papyrus;
+    background-color: black;
+    text-shadow: 
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 31px #fff,
+    0 0 55px rgb(255,226,4),
+    0 0 91px rgb(255,226,4),
+    0 0 100px rgb(255,226,4),
+    0 0 122px rgb(255,226,4),
+    0 0 140px rgb(255,226,4);
+}
+
+
