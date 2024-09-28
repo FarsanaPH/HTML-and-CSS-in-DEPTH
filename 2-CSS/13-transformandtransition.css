@@ -1,0 +1,44 @@
+/* towards left*/
+.a{
+    margin:30px;
+    transition: 1s;
+    
+}
+.a:hover{
+    transform: skewX(40deg);
+}
+
+/* towards right */
+.b{
+    margin:100px;
+    transition: 1s;
+    
+} 
+.b:hover{
+    transform: rotate(30deg);
+}
+
+.c{
+    margin:30px;
+    transition: 1s;
+}
+.c:hover{
+    transform: translateY(-100px);
+}
+
+/* box */
+.box{
+    display: grid;
+    width: 240px;
+    height: 240px;
+    margin: 100px;
+    background-color: green;
+    border-radius: 12px;
+    border:solid green 4px;
+}
+
+.box:hover{
+    transform:rotateZ(60deg);
+    background-color:rosybrown;
+    transition:3s;
+}
