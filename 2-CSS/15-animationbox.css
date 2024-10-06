@@ -1,0 +1,30 @@
+/* Basic reset for margins and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+/* Box styling */
+.box {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    /* note to use alternate when using from-to in keyframe */
+    animation: moveRight 3s infinite alternate;
+}
+
+/* Simple keyframes using from-to */
+@keyframes moveRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(300px);
+    }
+}
