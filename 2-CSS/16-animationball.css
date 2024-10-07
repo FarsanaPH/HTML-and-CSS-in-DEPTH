@@ -1,0 +1,47 @@
+/* Basic reset for margins and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+/* Container to center the ball */
+.container {
+    position: relative;
+    width: 200px;
+    height: 400px;
+    border: 2px solid #000;
+    overflow: hidden;
+}
+
+/* Ball styling */
+.ball {
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border: 2px solid black;
+    border-radius: 50%; /* Makes the div circular */
+    animation: bounce 5s infinite linear ;
+}
+
+/* Keyframes for bouncing animation */
+@keyframes bounce {
+    0%,  100% {
+        transform: translateY(0);
+    }
+    40% {
+        background-color: green;
+        transform: translateY(-150px);   
+    }
+    60% {
+        background-color: yellow;
+        transform: translateY(-75px);   
+    }
+}
